@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Charity Management System</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            min-height: 100vh;
+            width: 100%;
+        
+        background-image: url("https://files.globalgiving.org/pfil/26802/pict_featured_jumbo.jpg?t=1620052055000");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+     }
+            nav{
+     display: flex;
+     padding: 2%,6%;
+     justify-content: space-between;
+     align-items: center;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+        }
+    .nav-links ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+.nav-links ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+.nav-links ul li:hover::after{
+            width: 100%;
+        }
+        .text-box{
+            width: 90%;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .text-box h1{
+              font-size: 62px;
+        }
+        .text-box p{
+            margin: 10px 0 40px;
+            font-size: 25px;
+            color: #fff;
+        }
+        .hero-btn{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 12px 34px;
+            font-size: 13px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+        }
+        .hero-btn:hover{
+            border: 1px solid #f44336;
+            background: #f44336;
+            transition: 1s;
+
+        }
+        .Twohomes{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+        h1{
+            font-size: 36px;
+            font-weight: 600;
+            text-align: center;
+        }
+        p{
+            color: #777;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+            text-align: center;
+        }
+        .rows{
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .Orphanages{
+            flex-basis: 31%;
+            background: #fac7c7;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transition: 0.5s;
+        }
+        h3{
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        .Orphanages:hover{
+           box-shadow: 0 0 20px 0px rgba(0 0 0 0.2);
+        }
+        .Oldage{
+            flex-basis: 31%;
+            background: #fac7c7;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transition: 0.5s;
+        }
+        h3{
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        .Oldage:hover{
+           box-shadow: 0 0 20px 0px rgba(0 0 0 0.2);
+        }
+        
+        .Fecilities{
+              width: 80%;
+              margin: auto;
+              text-align: center;
+              padding-top: 50px;
+              flex-basis: 31%;
+        }
+        h1{
+            font-size: 36px;
+            font-weight: 600;
+            text-align: center;
+        }
+        p{
+            color: #5a4646;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+            text-align: center;
+        }
+        .Contact{
+            width: 80%;
+              margin: auto;
+              text-align: center;
+              padding-top: 50px;
+              flex-basis: 31%;
+        }h1{
+            font-size: 36px;
+            font-weight: 600;
+            text-align: center;
+        }
+        p{
+            color: #5a4646;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+            text-align: center;
+        }
+        .cta{
+            background-image: url("https://s-media-cache-ak0.pinimg.com/736x/1f/6e/0b/1f6e0bdf3f39c75f48e0e5b2ccb9694f--inspiration-quotes-orphan.jpg");
+            background-position: center;
+            background-size:contain;
+            border-radius: 10px;
+            background-repeat: no-repeat;
+            padding: 25vh 50px;
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+    <section  class="header">
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="Charity Management System home page.html">Home</a></li>
+                    <li><a href="About us.html">About Us</a></li>
+                    <li><a href="Adoption.html">Adoption</a></li>
+                    <li><a href="Donation.html">Donation</a></li>
+                    <li><a href="Cloth Box.html">Cloth Box</a></li>
+                    <li><a href="Food Support.html">Food Support</a></li>
+                    <li><a href="Events.html">Events</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box">
+            <h1>Angel's Kingdom</h1>
+            <p>Welcome to our Fundation where you can see many peaceful childerns and old age peoples</p>
+            <a href="" class="hero-btn">visit to know more</a>
+        </div>
+    </section>
+    <!----------Two Homes----------->
+    <section class="Twohomes">
+        <h1>Two Homes</h1>
+        <p>We have two homes in our organizations.</p>
+        <div class="rows">
+            <div class="Orphanages">
+                <h3>Orphanage</h3>
+                <p>Here in this orphanage we can see some childrens who are leading happy and peaceful file where there is no lack for any thing</p>
+            </div>
+            <div class="Oldage">
+                <h3>Oldage</h3>
+                <p>Here in this oldage we can see some old peoples who are leading happy and peaceful file where there is no lack for any thing</p>
+            </div>
+            
+        </div>
+    </section>
+    <!----------Fecilities-------->
+    <section class="Fecilitie">
+        <h1>Booking</h1>
+        <p>Here you have many fecilities to interact with peoples in the Orphanage and Oldage home<br>by booking the events you can adopt the childern and you may also give your contribution for them.</p>
+    </section><br><br>
+
+        <!----------Call To Action-------->
+        <section class="cta"></section><br><br>
+        <!------ Footer------>
+        <section class="Contacts">
+            <b> <h1>Contact</h1></b>
+ <p> To Know more about our Organization come and visit orphanages and oldage home <br>are do visit organization head to know more adout us. You can also book to visit our homes</p>
+         </section>
+        </div>
+    </section>
+</body>
+</html>

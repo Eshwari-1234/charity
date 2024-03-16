@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Charity Management System</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            min-height: 100vh;
+            width: 100%;
+        
+        background-image: url("https://i.pinimg.com/originals/fc/48/16/fc481604c30ca0f1cc04155a29948cbe.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+     }
+            nav{
+     display: flex;
+     padding: 2%,6%;
+     justify-content: space-between;
+     align-items: center;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+        }
+    .nav-links ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+.nav-links ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+.nav-links ul li:hover::after{
+            width: 100%;
+        }
+        .text-box{
+            width: 90%;
+            color: Red;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .text-box h1{
+              font-size: 62px;
+        }
+        
+        
+        .hero-btn{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 12px 34px;
+            font-size: 13px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+        }
+        .hero-btn:hover{
+            border: 1px solid #f44336;
+            background: #f44336;
+            transition: 1s;
+
+        }
+        
+        .Content{
+            width: 80%;
+              margin: auto;
+              text-align: center;
+              padding-top: 50px;
+              flex-basis: 31%;
+        }h1{
+            font-size: 36px;
+            font-weight: 600;
+            text-align: center;
+        }
+        p{
+            color: #5a4646;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+            text-align: center;
+        }
+        .GFG { 
+            background-color: white; 
+            border: 2px solid black; 
+            color: rgb(128, 0, 90); 
+            padding: 50px 100px; 
+            text-align: left; 
+            display: inline-block; 
+            font-size: 20px; 
+            margin: 10px 30px; 
+            cursor: pointer; 
+        }
+        .ABC {
+            padding-left: 26%;
+        }
+        .DEF {
+            font-size: 20px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <!----------header------>
+    <section  class="header">
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="Charity Management System home page.html">Home</a></li>
+                    <li><a href="About us.html">About Us</a></li>
+                    <li><a href="Adoption.html">Adoption</a></li>
+                    <li><a href="Donation.html">Donation</a></li>
+                    <li><a href="Cloth Box.html">Cloth Box</a></li>
+                    <li><a href="Food Support.html">Food Support</a></li>
+                    <li><a href="Events.html">Events</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box">
+            <h1>Events</h1>
+            <br>
+            <a href="" class="hero-btn">visit to know more</a>
+        </div>
+    </section>
+    <!-------Contant----->
+    <section class="Content">
+       <h1><b><u>Know More</u></b></h1><br>
+        <p> If you’ve ever hit that moment sometimes a small lift up can send you back in the right direction. Sometimes the well-conceived words of history’s very best innovators, entrepreneurs, and leaders can be just the inspiration you need.  Always remember the reason why you started, especially in those moments when self-doubt comes in. The reason you started will always pull you out of the shadows.A clear vision, backed by definite plans, gives you a tremendous feeling of confidence and personal power.  </p>
+    </section>
+        </div>
+    </section>
+<br><br>
+<u><h1>Events Form</h1></u><br>
+<!---<form>
+    <table>
+        <tr>
+            <td>Orphanage Age/Old Age:</td>
+            <td>
+                <select name="Orphanage Age/Old Age" required>
+                    <option value="">Select a Orphanage Age/Old Age</option>
+                    <option value="Blue Bird orphanage">Blue Bird orphanage</option>
+                    <option value="New Horizon orphanage">New Horizon orphanage</option>
+                    <option value="Tree House orphanage">Tree House orphanage</option>
+                    <option value="Sunrise oldage">Blue Bird oldage</option>
+                    <option value="Shadow ridge oldage">Shadow ridge oldage</option>
+                    <option value="Holy cross oldage">Holy cross oldage</option>
+                </select>  
+            </td>
+            </tr>
+            </table><br> 
+            <table>
+                <tr>
+                    <td>Types Of Events:</td>
+                    <td>
+                        <select name="Events Conducted" required>
+                            <option value="">Select the type of events</option>
+                            <option value="Birthday">Birthday</option>
+                            <option value="Festival">Festival</option>
+                            <option value="Emotional support(Motival Speech)">Emotional support(Motival Speech)</option>
+                            <option value="Health Care">Health Care</option>
+                        </select>  
+                    </td>
+                    </tr>
+                    </table><br>
+            <label>Number of Hours:</label>
+            <input type="text" placeholder="Number of Hours" required><br><br>
+            <label>Number of Guests:</label>
+            <input type="text" placeholder="Number of Guests" required><br><br>
+            <lebel>Time:</lebel>
+            <input type="time" placeholder="time"><br><br>
+            <tr>
+                <td>Requested Date:</td>
+                <td><input type="date" name="dob" required></td>
+            </tr>
+            
+</form>--->
+<div class="ABC">
+    <form class = "GFG" action="{{ url_for('Events.html')}}" method="post">
+        >
+
+     <label> Orphanage/Old Age:</label>
+            <select name="Orphanage/Old Age" id="Orphanage/Old Age" name="Orphanage/Old Age" class="DEF" required>
+                <option value="">Select a Orphanage Age/Old Age</option>
+                <option value="Blue Bird orphanage">Blue Bird orphanage</option>
+                <option value="New Horizon orphanage">New Horizon orphanage</option>
+                <option value="Tree House orphanage">Tree House orphanage</option>
+                <option value="Sunrise oldage">Blue Bird oldage</option>
+                <option value="Shadow ridge oldage">Shadow ridge oldage</option>
+                <option value="Holy cross oldage">Holy cross oldage</option>
+            </select>  
+         <br><br>
+    <label>Events Conducted:</label>
+    <select name="Events Conducted" id="Events Conducted" name="Events Conducted" class="DEF" required>
+        <option value="">Select the type of events</option>
+        <option value="Birthday">Birthday</option>
+        <option value="Festival">Festival</option>
+        <option value="Emotional support(Motivational Speech)">Emotional support(Motival Speech)</option>
+        <option value="Health Care">Health Care</option>
+    </select><br><br>
+    <label>Number of Hours:</label>
+    <input type="text" id="Number of Hours" name="Number of Hours" placeholder="Number of Hours" class="DEF" required><br><br>
+    <label>Number of Guests:</label>
+    <input type="text" id="Number of Guests" name="Number of Guests" placeholder="Number of Guests" class="DEF"   required><br><br>
+
+    <label>Requested Date:</label>
+    <input type="date" id="Requested Date" name="Requested Date" class="DEF"  required><br><br>
+    <center> <button type="submit"value="submit" class="DEF" id="btn" onclick="window.location.href='submit.html';">submit</button></center>
+</form>
+
+</body>
+</html>
