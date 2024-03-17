@@ -1,12 +1,14 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <title>Register</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    </head>
+    </head> -->
     <body>
+        {% extends 'base.html' %}
+        {% block body %}
         <div class="register">
             <h1>Register</h1>
             <div class="links">
@@ -16,8 +18,8 @@
             <form action="{{ url_for('register') }}" method="post" autocomplete="off">
                 <label for="email">
                 </label>
-                <input  type="email" name="email" placeholder="Email" id="email" required>
-                <input type="text" name="register" id="regester" value="regester" hidden>
+                <input  type="email" name="email_id" placeholder="Email" id="email_id" required>
+                <input type="text" name="register" id="register" value="register" hidden>
                 <label for="password">
                 </label>
                 <input type="password" name="password" placeholder="Password" id="password" required>
@@ -25,39 +27,59 @@
                 </label>
                 <input type="text" name="full_name" placeholder="full_name" id="full_name" required>
                 <label for="Gender">
-                    <input type="radio" name="Gender" value="M" required>M    
-                    <input type="radio" name="Gender" value="F" required>F
+                    <input type="radio" name="gender" value="M" required>M    
+                    <input type="radio" name="gender" value="F" required>F
                 </label>
                 <label for="Address1">
                 </label>
-                <input type="text" name="Address1" placeholder="Address1" id="Address1" required>
+                <input type="text" name="address_1" placeholder="Address1" id="address_1" required>
                 <label for="Address2">
                 </label>
-                <input type="text" name="Address2" placeholder="Address2" id="Address2" required>
+                <input type="text" name="address_2" placeholder="Address2" id="address_2" required>
                 <label for="district">
                 </label>
                 <input type="text" name="district" placeholder="district" id="district" required>
+                {% for district in districts %}
+                    
+                            <option value="{{district[ 'dist_id']}}">{{district['dist_name']}}</option>
+                         
+                           
+                    {% endfor %}
                 <label for="state">
                 </label>
                 <input type="text" name="state" placeholder="state" id="state" required>
+                {% for state in states %}
+                     
+                <option value="{{state['state_id']}}">{{state['state_name']}}</option>
+          
+                {% endfor %}
                 <label for="Country">
                 </label>
-                <input type="text" name="Country" placeholder="Country" id="Country" required>
+                <input type="text" name="country" placeholder="Country" id="country" required>
+                {% for country in countrys %}
+                       
+                <option value="{{country['country_id']}}">{{country['country_name']}}</option>
+            
+                {% endfor %}
+                <label for="phone_no">
+                </label>
+                <input type="number" name="phone_no" placeholder="phone_no" id="phone_no" required>
                 <label for="Date Of Birth">
                 </label>
-                <input type="date" name="date of birth" placeholder="date of birth" id="date of birth" required>
+                <input type="date" name="DOB" placeholder="date of birth" id="DOB" required>
                 <label for="occupation">
                 </label>
                 <input type="text" name="occupation" placeholder="occupation" id="occupation" required>
-                <label>Role Details: </label>
-                        <select name="role details" required>
-                            <option value="">select the roles</option>
-                            <option value="Adopters">Adopters</option>
-                            <option value="Donar">Donar</option>
-                        </select>
+                {% for occupatin in occupations %}
+                       
+                <option value="{{occupatin['occupation_id']}}">{{occupatin['occupation_name']}}</option>
+            
+                {% endfor %}
+
                 <div class="msg">{{ msg }}</div>
                 <input type="submit" name="submit" value="submit">
             </form>
         </div>
     </body>
-</html>
+    {% endblock body %}
+<!-- </html> -->

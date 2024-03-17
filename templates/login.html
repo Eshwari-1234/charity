@@ -1,31 +1,36 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Login Form</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    </head>
-    <body>
-        <div class="login">
-            <h1>LOGIN</h1>
-           <!------div class="links"-------
+
+<head>
+    <meta charset="utf-8">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+</head> -->
+
+<body>
+    {% extends 'base.html' %}
+    {% block body %}
+    <div class="login">
+        <h1>LOGIN</h1>
+        <!------div class="links"-------
                 <a href="{{ url_for('login') }}" class="active">LOGIN</a>
                
             </div> ----->
-            <form action="{{ url_for('login') }}" method="POST">
-                <div class="msg">{{ msg }}</div>
-                <label for="username">
-                    <i class="fa fa-user"></i>
-                </label>
-                <input type="text" name="username" placeholder="username" id="username" required>
-                <label for="password">
-                    <i class="fa fa-lock"></i>
-                </label>
-                <input type="password" name="password" placeholder="Password" id="password" required>
-               
-                <input type="submit"  name="submit" value="submit">
-            </form>
-        </div>
-    </body>
-</html>
+        <form action="{{ url_for('login') }}" method="POST">
+            <div class="msg">{{ msg }}</div>
+            <label for="username">
+                <i class="fa fa-user"></i>
+            </label>
+            <input type="text" name="username" placeholder="username" id="username" required>
+            <label for="password">
+                <i class="fa fa-lock"></i>
+            </label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+
+            <input type="submit" name="submit" value="submit">
+        </form>
+    </div>
+</body>
+{% endblock body %}
+<!-- </html> -->

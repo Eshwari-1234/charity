@@ -1,22 +1,174 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
-    <title>Charity Management System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
     <style>
+        * {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            background-color: #435165;
+            margin: 0;
+        }
+
+        .login,
+        .register {
+            width: 400px;
+            background-color: #ffffff;
+            box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+            margin: 100px auto;
+        }
+
+        .login h1,
+        .register h1 {
+            text-align: center;
+            color: brown;
+            font-size: 24px;
+            padding: 20px 0 20px 0;
+            border-bottom: 1px solid #dee0e4;
+        }
+
+        .login .links,
+        .register .links {
+            display: flex;
+            padding: 0 15px;
+        }
+
+        .login .links a,
+        .register .links a {
+            color: #adb2ba;
+            text-decoration: none;
+            display: inline-flex;
+            padding: 0 10px 10px 10px;
+            font-weight: bold;
+        }
+
+        .login .links a:hover,
+        .register .links a:hover {
+            color: brown;
+        }
+
+        .login .links a.active,
+        .register .links a.active {
+            border-bottom: 3px solid brown;
+            color: brown;
+        }
+
+        .login form,
+        .register form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        .login form label,
+        .register form label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+            color: #ffffff;
+        }
+
+        .login form input[type="password"],
+        .login form input[type="text"],
+        .login form input[type="email"],
+        .register form input[type="password"],
+        .register form input[type="text"],
+        .register form input[type="email"] {
+            width: 310px;
+            height: 50px;
+            border: 1px solid #dee0e4;
+            margin-bottom: 20px;
+            padding: 0 15px;
+        }
+
+        .login form input[type="submit"],
+        .register form input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            background-color: brown;
+            border: 0;
+            cursor: pointer;
+            font-weight: bold;
+            color: #ffffff;
+            transition: background-color 0.2s;
+        }
+
+        .login form input[type="submit"]:hover,
+        .register form input[type="submit"]:hover {
+            background-color: brown;
+            transition: background-color 0.2s;
+        }
+
+        .navtop {
+            background-color: #2f3947;
+            height: 60px;
+            width: 100%;
+            border: 0;
+        }
+
+        .navtop div {
+            display: flex;
+            margin: 0 auto;
+            width: 1000px;
+            height: 100%;
+        }
+
+        .navtop div h1,
+        .navtop div a {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .navtop div h1 {
+            flex: 1;
+            font-size: 24px;
+            padding: 0;
+            margin: 0;
+            color: #eaebed;
+            font-weight: normal;
+        }
+
+        .navtop div a {
+            padding: 0 20px;
+            text-decoration: none;
+            color: #c1c4c8;
+            font-weight: bold;
+        }
+
+        .navtop div a i {
+            padding: 2px 8px 0 0;
+        }
+
+        .navtop div a:hover {
+            color: #eaebed;
+        }
+
+        body.loggedin {
+            background-color: #f3f4f7;
+        }
+
+
         *{
             margin: 0;
             padding: 0;
         }
         .header{
-            min-height: 100vh;
+            /* min-height: 100vh; */
             width: 100%;
-        
-        background-image: url("https://files.globalgiving.org/pfil/26802/pict_featured_jumbo.jpg?t=1620052055000");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-        position: relative;
      }
             nav{
      display: flex;
@@ -186,7 +338,7 @@
             text-align: center;
         }
         .cta{
-            background-image: url("https://s-media-cache-ak0.pinimg.com/736x/1f/6e/0b/1f6e0bdf3f39c75f48e0e5b2ccb9694f--inspiration-quotes-orphan.jpg");
+            /* background-image: url("https://s-media-cache-ak0.pinimg.com/736x/1f/6e/0b/1f6e0bdf3f39c75f48e0e5b2ccb9694f--inspiration-quotes-orphan.jpg"); */
             background-position: center;
             background-size:contain;
             border-radius: 10px;
@@ -195,15 +347,16 @@
             
         }
 
-        
+
     </style>
 </head>
+
 <body>
     <section  class="header">
         <nav>
             <div class="nav-links">
                 <ul>
-                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="Charity Management System home page.html">Home</a></li>
                     <li><a href="About us.html">About Us</a></li>
                     <li><a href="Adoption.html">Adoption</a></li>
                     <li><a href="Donation.html">Donation</a></li>
@@ -213,42 +366,14 @@
                 </ul>
             </div>
         </nav>
-        <div class="text-box">
+        <!-- <div class="text-box">
             <h1>Angel's Kingdom</h1>
             <p>Welcome to our Fundation where you can see many peaceful childerns and old age peoples</p>
-            <a href="register.html" class="hero-btn">Register Now</a>
-        </div>
+            <a href="" class="hero-btn">visit to know more</a>
+        </div> -->
     </section>
-    <!----------Two Homes----------->
-    <section class="Twohomes">
-        <h1>Two Homes</h1>
-        <p>We have two homes in our organizations.</p>
-        <div class="rows">
-            <div class="Orphanages">
-                <h3>Orphanage</h3>
-                <p>Here in this orphanage we can see some childrens who are leading happy and peaceful file where there is no lack for any thing</p>
-            </div>
-            <div class="Oldage">
-                <h3>Oldage</h3>
-                <p>Here in this oldage we can see some old peoples who are leading happy and peaceful file where there is no lack for any thing</p>
-            </div>
-            
-        </div>
-    </section>
-    <!----------Fecilities-------->
-    <section class="Fecilitie">
-        <h1>Booking</h1>
-        <p>Here you have many fecilities to interact with peoples in the Orphanage and Oldage home<br>by booking the events you can adopt the childern and you may also give your contribution for them.</p>
-    </section><br><br>
-
-        <!----------Call To Action-------->
-        <section class="cta"></section><br><br>
-        <!------ Footer------>
-        <section class="Contacts">
-            <b> <h1>Contact</h1></b>
- <p> To Know more about our Organization come and visit orphanages and oldage home <br>are do visit organization head to know more adout us. You can also book to visit our homes</p>
-         </section>
-        </div>
-    </section>
+    {% block body %}
+    {% endblock body %}
 </body>
+
 </html>
